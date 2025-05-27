@@ -19,8 +19,8 @@ export default function LoadingBar({ onComplete }) {
 
   return (
     <>
-      <div className="absolute bottom-14 left-1/2 transform -translate-x-1/2 text-sm font-medium text-gray-700">
-        Loading... {progress}%
+      <div className="absolute bottom-14 right-10 transform -translate-x-1/2 text-sm font-medium text-gray-700">
+        {progress}%
       </div>
       <div className="absolute bottom-10 left-0 w-full px-10">
         <div className="h-1.5 w-full bg-gray-300 rounded-md overflow-hidden">

@@ -59,7 +59,7 @@ const BaseTemplate = () => {
 
   if (isComplete) {
     return (
-      <div className="w-[448px] px-4 h-[546px] flex flex-col items-center justify-center">
+      <div className="w-full lg:w-[448px] px-4 h-full lg:h-[546px] flex flex-col items-center justify-center">
         <div className="text-center space-y-6">
           <Sprout className="w-16 h-16 mx-auto text-green-600" />
           <h2 className="text-2xl font-bold text-gray-800">
@@ -80,9 +80,9 @@ const BaseTemplate = () => {
   }
 
   return (
-    <div className="w-[448px] px-4 h-full">
+    <div className="w-full lg:w-[448px] px-4 h-full">
       {/* Header */}
-      <div className="flex items-center w-[416px] h-[52px] justify-between bg-white">
+      <div className="flex items-center w-full lg:w-[416px] h-[52px] justify-between bg-white">
         <BackButton
           onClick={handleBackButton}
           disabled={currentQuestionIndex === 0 || isLoading}
@@ -92,7 +92,7 @@ const BaseTemplate = () => {
       </div>
 
       {/* Progress Bar */}
-      <div className="w-[416px] bg-white mb-2">
+      <div className="w-full lg:w-[416px] bg-white mb-2">
         <div className="w-full bg-gray-200 rounded-full h-1">
           <div
             className="h-1 rounded-full transition-all duration-300"

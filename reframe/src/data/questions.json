@@ -1,0 +1,219 @@
+[
+  {
+    "id": 1,
+    "question": "How would you like to redefine your relationship with alcohol?",
+    "options": [
+      { "id": "quit", "text": "🔚 Quit completely" },
+      { "id": "reduce", "text": "⬇️ Reduce consumption" },
+      { "id": "continue", "text": "🌱 Continue a sober lifestyle" }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "How old are you?",
+    "options": [
+      { "id": "18-29", "text": "18-29" },
+      { "id": "30-39", "text": "30-39" },
+      { "id": "40-49", "text": "40-49" },
+      { "id": "50-59", "text": "50-59" },
+      { "id": "60+", "text": "60+" }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "During a typical week, how many days involve consuming alcohol?",
+    "options": [
+      { "id": "daily", "text": "Every day—it's part of my daily routine" },
+      {
+        "id": "weekly",
+        "text": "Several days—particularly around midweek and weekends"
+      },
+      { "id": "weekends", "text": "Once or twice—usually on weekends" },
+      { "id": "rarely", "text": "Rarely or never during the week" }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "How frequently do you find yourself purchasing alcoholic beverages for home?",
+    "options": [
+      { "id": "daily", "text": "I stock up regularly—it’s a staple at home" },
+      {
+        "id": "occasionally",
+        "text": "I buy some occasionally for certain moods"
+      },
+      {
+        "id": "special",
+        "text": "Only for special occasions or when guests come over"
+      },
+      { "id": "never", "text": "I don't typically purchase alcohol for home" }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "How do you typically handle social events where alcohol is present?",
+    "options": [
+      { "id": 1, "text": "I usually partake and enjoy many drinks" },
+      { "id": 2, "text": "I might have one or two drinks to be sociable" },
+      {
+        "id": 3,
+        "text": "I prefer non-alcoholic options but don't mind others drinking"
+      },
+      { "id": 4, "text": "I avoid events where alcohol is the main focus" }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "What's your biggest concern about alcohol use?",
+    "options": [
+      { "id": "addiction", "text": "Developing dependency" },
+      { "id": "health_impact", "text": "Long-term health effects" },
+      { "id": "performance", "text": "Impact on work/life performance" }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "What best describes your current occupation or primary role?",
+    "options": [
+      { "id": 1, "text": "💼 Employed (full-time or part-time)" },
+      { "id": 2, "text": "💻 Self-employed or freelancer" },
+      { "id": 3, "text": "🎓 Student" },
+      { "id": 4, "text": "🏠 Homemaker or primary caregiver" },
+      { "id": 5, "text": "🚀 Entrepreneur" },
+      { "id": 6, "text": "🌅 Retired" }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "As a homemaker, how has retirement influenced your daily leisure activities? Our expertise can guide you in balancing lifestyle changes.",
+    "options": [
+      { "id": 1, "text": "I have more time for hobbies and relaxation" },
+      {
+        "id": 2,
+        "text": "I feel a bit isolated and seek new social connections"
+      },
+      {
+        "id": 3,
+        "text": "I'm exploring new interests and learning opportunities"
+      },
+      {
+        "id": 4,
+        "text": "I find joy in spending quality time with family and friends"
+      },
+      {
+        "id": 5,
+        "text": "I'm adjusting to a different routine and seeking purpose"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "How do you want to spend the time you currently use for drinking?",
+    "options": [
+      { "id": "exercise", "text": "Exercise and fitness" },
+      { "id": "hobbies", "text": "Hobbies and creativity" },
+      { "id": "family", "text": "Quality time with family" }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "What's your experience with previous attempts to change drinking habits?",
+    "options": [
+      { "id": "first_time", "text": "This is my first attempt" },
+      { "id": "few_attempts", "text": "I've tried a few times" },
+      { "id": "many_attempts", "text": "I've tried many times" }
+    ]
+  },
+  {
+    "id": 11,
+    "question": "How confident are you in your ability to achieve your goal?",
+    "options": [
+      { "id": "very_confident", "text": "Very confident" },
+      { "id": "somewhat_confident", "text": "Somewhat confident" },
+      { "id": "not_confident", "text": "Not very confident" }
+    ]
+  },
+  {
+    "id": 12,
+    "question": "What type of support would be most helpful for you?",
+    "options": [
+      { "id": "app_tracking", "text": "App-based tracking" },
+      { "id": "community", "text": "Community support" },
+      { "id": "professional", "text": "Professional counseling" }
+    ]
+  },
+  {
+    "id": 13,
+    "question": "How important is it for you to track your progress?",
+    "options": [
+      { "id": "very_important", "text": "Very important" },
+      { "id": "somewhat_important", "text": "Somewhat important" },
+      { "id": "not_important", "text": "Not very important" }
+    ]
+  },
+  {
+    "id": 14,
+    "question": "What's your preferred way to celebrate milestones?",
+    "options": [
+      { "id": "treat_yourself", "text": "Treat yourself to something special" },
+      { "id": "share_achievement", "text": "Share achievement with others" },
+      {
+        "id": "private_reflection",
+        "text": "Private reflection and journaling"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "question": "How do you typically handle stress without alcohol?",
+    "options": [
+      { "id": "exercise", "text": "Exercise or physical activity" },
+      { "id": "meditation", "text": "Meditation or mindfulness" },
+      { "id": "struggling", "text": "I struggle with this" }
+    ]
+  },
+  {
+    "id": 16,
+    "question": "What's your biggest fear about changing your relationship with alcohol?",
+    "options": [
+      { "id": "social_isolation", "text": "Social isolation" },
+      { "id": "missing_out", "text": "Missing out on experiences" },
+      { "id": "handling_emotions", "text": "Difficulty handling emotions" }
+    ]
+  },
+  {
+    "id": 17,
+    "question": "How do you want to feel one month from now?",
+    "options": [
+      { "id": "energetic", "text": "More energetic and clear-minded" },
+      { "id": "in_control", "text": "More in control of my choices" },
+      { "id": "proud", "text": "Proud of my progress" }
+    ]
+  },
+  {
+    "id": 18,
+    "question": "What's your ideal weekend without alcohol?",
+    "options": [
+      { "id": "active", "text": "Active and adventurous" },
+      { "id": "relaxing", "text": "Peaceful and relaxing" },
+      { "id": "productive", "text": "Productive and fulfilling" }
+    ]
+  },
+  {
+    "id": 19,
+    "question": "How do you want to be remembered by your loved ones?",
+    "options": [
+      { "id": "present", "text": "As someone who was truly present" },
+      { "id": "inspiring", "text": "As someone who inspired positive change" },
+      { "id": "reliable", "text": "As someone reliable and trustworthy" }
+    ]
+  },
+  {
+    "id": 20,
+    "question": "What's the most important thing you want to achieve through this journey?",
+    "options": [
+      { "id": "self_respect", "text": "Regain self-respect and confidence" },
+      { "id": "better_relationships", "text": "Build better relationships" },
+      { "id": "health_longevity", "text": "Improve health and longevity" }
+    ]
+  }
+]

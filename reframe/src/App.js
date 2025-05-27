@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import HeroContent from './components/HeroContent1';
-import LoadingBar from './components/LoadingBar';
+import BaseTemplate from "./components/screens/BaseTemplate";
+import HeroContent from "./components/common/HeroContent1";
+import LoadingBar from "./components//common/LoadingBar";
+import { useState } from "react";
 
-export default function App() {
+function App() {
   const [showNextContent, setShowNextContent] = useState(false);
 
   const handleComplete = () => {
@@ -11,16 +12,17 @@ export default function App() {
 
   if (showNextContent) {
     return (
-      <div className="h-screen w-full flex justify-center items-center">
-        <h1 className="text-2xl font-bold">Welcome to the Next Content! 🎉</h1>
+      <div className="w-screen h-screen flex flex-col justify-center items-center font-inter">
+        <BaseTemplate />
       </div>
     );
   }
-
   return (
-    <div className="h-screen w-full flex flex-col justify-center items-center relative px-10">
+    <div className="h-screen w-screen flex flex-col justify-center items-center relative px-10">
       <HeroContent />
       <LoadingBar onComplete={handleComplete} />
     </div>
   );
 }
+
+export default App;

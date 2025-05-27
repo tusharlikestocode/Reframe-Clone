@@ -20,7 +20,7 @@ export default function App() {
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center relative px-10">
       <HeroContent />
-      {/* <LoadingBar onComplete={handleComplete} /> */}
+      <LoadingBar onComplete={handleComplete} />
     </div>
   );
 }

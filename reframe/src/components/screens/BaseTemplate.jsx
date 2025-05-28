@@ -79,6 +79,11 @@ const BaseTemplate = () => {
     );
   }
 
+
+  if(currentQuestion)
+
+
+
   return (
     <div className="w-full lg:w-[448px] px-4 h-full">
       {/* Header */}
@@ -103,6 +108,10 @@ const BaseTemplate = () => {
           ></div>
         </div>
       </div>
+
+      
+
+
 
       {/* Main Content */}
       <QuestionTemplate

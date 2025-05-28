@@ -18,7 +18,7 @@ function App() {
     );
   }
   return (
-    <div className="h-screen w-screen flex flex-col justify-center items-center relative px-10">
+    <div className="h-screen w-screen flex flex-col justify-center items-center relative px-10 pb-10">
       <HeroContent />
       <LoadingBar onComplete={handleComplete} />
     </div>

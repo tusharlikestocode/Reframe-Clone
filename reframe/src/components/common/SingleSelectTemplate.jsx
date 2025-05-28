@@ -1,4 +1,4 @@
-const QuestionTemplate = ({
+const SingleSelectTemplate = ({
   question,
   options,
   selectedOption,
@@ -48,4 +48,4 @@ const QuestionTemplate = ({
   );
 };
 
-export default QuestionTemplate;
+export default SingleSelectTemplate;

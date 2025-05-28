@@ -1,6 +1,19 @@
 [
   {
+    "id": 0,
+    "type": "reaction",
+    "question": "I believe that changing my relationship with alcohol will significantly improve my overall well-being",
+    "options": [
+      { "id": 1, "text": "✊" },
+      { "id": 2, "text": "👎" },
+      { "id": 3, "text": "🤷" },
+      { "id": 4, "text": "👍" },
+      { "id": 5, "text": "👏" }
+    ]
+  },
+  {
     "id": 1,
+    "type": "single",
     "question": "How would you like to redefine your relationship with alcohol?",
     "options": [
       { "id": "quit", "text": "🔚 Quit completely" },
@@ -10,6 +23,7 @@
   },
   {
     "id": 2,
+    "type": "single",
     "question": "How old are you?",
     "options": [
       { "id": "18-29", "text": "18-29" },
@@ -21,6 +35,7 @@
   },
   {
     "id": 3,
+    "type": "multi",
     "question": "During a typical week, how many days involve consuming alcohol?",
     "options": [
       { "id": "daily", "text": "Every day—it's part of my daily routine" },
@@ -34,6 +49,7 @@
   },
   {
     "id": 4,
+    "type": "single",
     "question": "How frequently do you find yourself purchasing alcoholic beverages for home?",
     "options": [
       { "id": "daily", "text": "I stock up regularly—it’s a staple at home" },
@@ -50,6 +66,7 @@
   },
   {
     "id": 5,
+    "type": "multi",
     "question": "How do you typically handle social events where alcohol is present?",
     "options": [
       { "id": 1, "text": "I usually partake and enjoy many drinks" },
@@ -63,6 +80,7 @@
   },
   {
     "id": 6,
+    "type": "single",
     "question": "What's your biggest concern about alcohol use?",
     "options": [
       { "id": "addiction", "text": "Developing dependency" },
@@ -72,6 +90,7 @@
   },
   {
     "id": 7,
+    "type": "single",
     "question": "What best describes your current occupation or primary role?",
     "options": [
       { "id": 1, "text": "💼 Employed (full-time or part-time)" },
@@ -84,6 +103,7 @@
   },
   {
     "id": 8,
+    "type": "multi",
     "question": "As a homemaker, how has retirement influenced your daily leisure activities? Our expertise can guide you in balancing lifestyle changes.",
     "options": [
       { "id": 1, "text": "I have more time for hobbies and relaxation" },
@@ -107,15 +127,17 @@
   },
   {
     "id": 9,
-    "question": "How do you want to spend the time you currently use for drinking?",
+    "type": "single",
+    "question": "Exploring new interests post-retirement? How does alcohol impact your mood and interactions at home? Let us support your journey.",
     "options": [
-      { "id": "exercise", "text": "Exercise and fitness" },
-      { "id": "hobbies", "text": "Hobbies and creativity" },
-      { "id": "family", "text": "Quality time with family" }
+      { "id": 1, "text": "Exercise and fitness" },
+      { "id": 2, "text": "Hobbies and creativity" },
+      { "id": 3, "text": "Quality time with family" }
     ]
   },
   {
     "id": 10,
+    "type": "single",
     "question": "What's your experience with previous attempts to change drinking habits?",
     "options": [
       { "id": "first_time", "text": "This is my first attempt" },
@@ -125,6 +147,7 @@
   },
   {
     "id": 11,
+    "type": "single",
     "question": "How confident are you in your ability to achieve your goal?",
     "options": [
       { "id": "very_confident", "text": "Very confident" },
@@ -134,6 +157,7 @@
   },
   {
     "id": 12,
+    "type": "single",
     "question": "What type of support would be most helpful for you?",
     "options": [
       { "id": "app_tracking", "text": "App-based tracking" },
@@ -143,6 +167,7 @@
   },
   {
     "id": 13,
+    "type": "multi",
     "question": "How important is it for you to track your progress?",
     "options": [
       { "id": "very_important", "text": "Very important" },
@@ -152,6 +177,7 @@
   },
   {
     "id": 14,
+    "type": "single",
     "question": "What's your preferred way to celebrate milestones?",
     "options": [
       { "id": "treat_yourself", "text": "Treat yourself to something special" },
@@ -164,6 +190,7 @@
   },
   {
     "id": 15,
+    "type": "multi",
     "question": "How do you typically handle stress without alcohol?",
     "options": [
       { "id": "exercise", "text": "Exercise or physical activity" },
@@ -173,6 +200,7 @@
   },
   {
     "id": 16,
+    "type": "single",
     "question": "What's your biggest fear about changing your relationship with alcohol?",
     "options": [
       { "id": "social_isolation", "text": "Social isolation" },
@@ -182,6 +210,7 @@
   },
   {
     "id": 17,
+    "type": "single",
     "question": "How do you want to feel one month from now?",
     "options": [
       { "id": "energetic", "text": "More energetic and clear-minded" },
@@ -191,6 +220,7 @@
   },
   {
     "id": 18,
+    "type": "single",
     "question": "What's your ideal weekend without alcohol?",
     "options": [
       { "id": "active", "text": "Active and adventurous" },
@@ -200,6 +230,7 @@
   },
   {
     "id": 19,
+    "type": "multi",
     "question": "How do you want to be remembered by your loved ones?",
     "options": [
       { "id": "present", "text": "As someone who was truly present" },
@@ -209,6 +240,7 @@
   },
   {
     "id": 20,
+    "type": "single",
     "question": "What's the most important thing you want to achieve through this journey?",
     "options": [
       { "id": "self_respect", "text": "Regain self-respect and confidence" },

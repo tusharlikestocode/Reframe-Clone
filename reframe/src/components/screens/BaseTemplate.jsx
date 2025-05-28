@@ -1,6 +1,8 @@
+// BaseTemplate.jsx
 import { Sprout } from "lucide-react";
 import BackButton from "../common/BackButton";
-import QuestionTemplate from "../common/QuestionTemplate";
+import SingleSelectTemplate from "../common/SingleSelectTemplate";
+import MultiSelectTemplate from "../common/MultiSelectTemplate";
 import MidwayScreen from "../common/MidwayScreen";
 import { useState } from "react";
 import questionsData from "../../data/questions.json";
@@ -13,12 +15,29 @@ const BaseTemplate = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showResponseReceived, setShowResponseReceived] = useState(false);
   const [hasSeenMidwayScreen, setHasSeenMidwayScreen] = useState(false);
-
   const halfwayIndex = Math.floor(questions.length / 2);
+
   const currentQuestion = questions[currentQuestionIndex];
   const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
 
-  const handleOptionSelect = (optionId) => {
+  const handleBackButton = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+      setIsLoading(false);
+      setShowResponseReceived(false);
+    }
+  };
+
+  const handleRestart = () => {
+    setCurrentQuestionIndex(0);
+    setAnswers({});
+    setIsComplete(false);
+    setIsLoading(false);
+    setShowResponseReceived(false);
+    setHasSeenMidwayScreen(false);
+  };
+
+  const handleSingleSelect = (optionId) => {
     const newAnswers = {
       ...answers,
       [currentQuestion.id]: optionId,
@@ -42,36 +61,35 @@ const BaseTemplate = () => {
     }, 500);
   };
 
-  const handleBackButton = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(currentQuestionIndex - 1);
-      setIsLoading(false);
-      setShowResponseReceived(false);
-    }
-  };
-
-  const handleRestart = () => {
-    setCurrentQuestionIndex(0);
-    setAnswers({});
-    setIsComplete(false);
-    setIsLoading(false);
+  const handleMultiSelectContinue = (selected) => {
+    setAnswers((prev) => ({ ...prev, [currentQuestion.id]: selected }));
+    setIsLoading(true);
     setShowResponseReceived(false);
-    setHasSeenMidwayScreen(false);
+
+    setTimeout(() => {
+      setIsLoading(false);
+      setShowResponseReceived(true);
+
+      setTimeout(() => {
+        setShowResponseReceived(false);
+        if (currentQuestionIndex < questions.length - 1) {
+          setCurrentQuestionIndex(currentQuestionIndex + 1);
+        } else {
+          setIsComplete(true);
+        }
+      }, 500);
+    }, 500);
   };
 
   if (questions.length === 0) return null;
 
   if (isComplete) {
     return (
-      <div className="w-full lg:w-[448px] px-4 h-full lg:h-[546px] flex flex-col items-center justify-center">
+      <div className="w-full lg:w-[448px] px-4 min-h-screen flex flex-col items-center justify-center">
         <div className="text-center space-y-6">
           <Sprout className="w-16 h-16 mx-auto text-green-600" />
-          <h2 className="text-2xl font-bold text-gray-800">
-            Questionnaire Complete!
-          </h2>
-          <p className="text-gray-600">
-            Thank you for completing all {questions.length} questions.
-          </p>
+          <h2 className="text-2xl font-bold text-gray-800">Questionnaire Complete!</h2>
+          <p className="text-gray-600">Thank you for completing all {questions.length} questions.</p>
           <button
             onClick={handleRestart}
             className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -83,37 +101,8 @@ const BaseTemplate = () => {
     );
   }
 
-  const renderMainContent = () => {
-    if (
-      currentQuestionIndex === halfwayIndex &&
-      !hasSeenMidwayScreen &&
-      !showResponseReceived &&
-      !isLoading
-    ) {
-      return (
-        <MidwayScreen
-          onContinue={() => {
-            setHasSeenMidwayScreen(true);
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
-          }}
-        />
-      );
-    }
-
-    return (
-      <QuestionTemplate
-        question={currentQuestion.question}
-        options={currentQuestion.options}
-        selectedOption={answers[currentQuestion.id]}
-        onOptionSelect={handleOptionSelect}
-        isLoading={isLoading}
-        showResponseReceived={showResponseReceived}
-      />
-    );
-  };
-
   return (
- <div className="w-full lg:w-[448px] px-4 min-h-screen flex flex-col">
+    <div className=" w-full lg:w-[448px] px-4 min-h-screen flex flex-col overflow-y-auto">
       {/* Header */}
       <div className="flex items-center w-full lg:w-[416px] h-[52px] justify-between bg-white">
         <BackButton
@@ -129,16 +118,57 @@ const BaseTemplate = () => {
         <div className="w-full bg-gray-200 rounded-full h-1">
           <div
             className="h-1 rounded-full transition-all duration-300"
-            style={{
-              width: `${progress}%`,
-              backgroundColor: "rgb(36, 58, 185)",
-            }}
+            style={{ width: `${progress}%`, backgroundColor: "#243AB9" }}
           ></div>
         </div>
       </div>
 
-      {/* Main Content */}
-      {renderMainContent()}
+      {currentQuestionIndex === halfwayIndex && !hasSeenMidwayScreen ? (
+        <MidwayScreen
+          onContinue={() => {
+            setHasSeenMidwayScreen(true);
+            setCurrentQuestionIndex(currentQuestionIndex + 1);
+          }}
+        />
+      ) : currentQuestion.type === "single" ? (
+        <SingleSelectTemplate
+          question={currentQuestion.question}
+          options={currentQuestion.options}
+          selectedOption={answers[currentQuestion.id]}
+          onOptionSelect={handleSingleSelect}
+          isLoading={isLoading}
+          showResponseReceived={showResponseReceived}
+        />
+      ) : (
+        <MultiSelectTemplate
+          question={currentQuestion.question}
+          options={currentQuestion.options}
+          selectedOptions={answers[currentQuestion.id] || []}
+          onOptionsSelect={(selected) =>
+            setAnswers((prev) => ({ ...prev, [currentQuestion.id]: selected }))
+          }
+          onContinue={() => {
+            setIsLoading(true);
+            setShowResponseReceived(false);
+
+            setTimeout(() => {
+              setIsLoading(false);
+              setShowResponseReceived(true);
+
+              setTimeout(() => {
+                setShowResponseReceived(false);
+                if (currentQuestionIndex < questions.length - 1) {
+                  setCurrentQuestionIndex(currentQuestionIndex + 1);
+                } else {
+                  setIsComplete(true);
+                }
+              }, 500);
+            }, 500);
+          }}
+          isLoading={isLoading}
+          showResponseReceived={showResponseReceived}
+        />
+      )}
     </div>
   );
 };

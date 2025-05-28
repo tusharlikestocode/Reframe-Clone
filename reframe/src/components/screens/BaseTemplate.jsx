@@ -1,6 +1,7 @@
 import { Sprout } from "lucide-react";
 import BackButton from "../common/BackButton";
 import QuestionTemplate from "../common/QuestionTemplate";
+import MidwayScreen from "../common/MidwayScreen";
 import { useState } from "react";
 import questionsData from "../../data/questions.json";
 
@@ -11,7 +12,9 @@ const BaseTemplate = () => {
   const [isComplete, setIsComplete] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showResponseReceived, setShowResponseReceived] = useState(false);
+  const [hasSeenMidwayScreen, setHasSeenMidwayScreen] = useState(false);
 
+  const halfwayIndex = Math.floor(questions.length / 2);
   const currentQuestion = questions[currentQuestionIndex];
   const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
 
@@ -53,6 +56,7 @@ const BaseTemplate = () => {
     setIsComplete(false);
     setIsLoading(false);
     setShowResponseReceived(false);
+    setHasSeenMidwayScreen(false);
   };
 
   if (questions.length === 0) return null;
@@ -79,13 +83,37 @@ const BaseTemplate = () => {
     );
   }
 
+  const renderMainContent = () => {
+    if (
+      currentQuestionIndex === halfwayIndex &&
+      !hasSeenMidwayScreen &&
+      !showResponseReceived &&
+      !isLoading
+    ) {
+      return (
+        <MidwayScreen
+          onContinue={() => {
+            setHasSeenMidwayScreen(true);
+            setCurrentQuestionIndex(currentQuestionIndex + 1);
+          }}
+        />
+      );
+    }
 
-  if(currentQuestion)
-
-
+    return (
+      <QuestionTemplate
+        question={currentQuestion.question}
+        options={currentQuestion.options}
+        selectedOption={answers[currentQuestion.id]}
+        onOptionSelect={handleOptionSelect}
+        isLoading={isLoading}
+        showResponseReceived={showResponseReceived}
+      />
+    );
+  };
 
   return (
-    <div className="w-full lg:w-[448px] px-4 h-full">
+ <div className="w-full lg:w-[448px] px-4 min-h-screen flex flex-col">
       {/* Header */}
       <div className="flex items-center w-full lg:w-[416px] h-[52px] justify-between bg-white">
         <BackButton
@@ -109,19 +137,8 @@ const BaseTemplate = () => {
         </div>
       </div>
 
-      
-
-
-
       {/* Main Content */}
-      <QuestionTemplate
-        question={currentQuestion.question}
-        options={currentQuestion.options}
-        selectedOption={answers[currentQuestion.id]}
-        onOptionSelect={handleOptionSelect}
-        isLoading={isLoading}
-        showResponseReceived={showResponseReceived}
-      />
+      {renderMainContent()}
     </div>
   );
 };

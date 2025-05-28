@@ -34,14 +34,13 @@ const QuestionTemplate = ({
 
       {/* Loading Animation */}
       {isLoading && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+        <div className="flex justify-center mt-6">
           <div className="w-6 h-6 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin duration-500"></div>
         </div>
       )}
 
-      {/* Response Message */}
       {showResponseReceived && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+        <div className="flex justify-center mt-6">
           <p className="text-gray-500 text-sm">Response received</p>
         </div>
       )}

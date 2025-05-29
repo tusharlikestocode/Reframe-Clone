@@ -6,12 +6,13 @@ import MultiSelectTemplate from "../common/MultiSelectTemplate";
 import MidwayScreen from "../common/MidwayScreen";
 import { useState } from "react";
 import questionsData from "../../data/questions.json";
+import FinalLoadingScreen from "../common/FinalLoadingScreen";
 
 const BaseTemplate = () => {
   const [questions, setQuestions] = useState(questionsData);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
-  const [isComplete, setIsComplete] = useState(false);
+  const [isComplete, setIsComplete] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [showResponseReceived, setShowResponseReceived] = useState(false);
   const [hasSeenMidwayScreen, setHasSeenMidwayScreen] = useState(false);
@@ -85,19 +86,7 @@ const BaseTemplate = () => {
 
   if (isComplete) {
     return (
-      <div className="w-full lg:w-[448px] px-4 min-h-screen flex flex-col items-center justify-center">
-        <div className="text-center space-y-6">
-          <Sprout className="w-16 h-16 mx-auto text-green-600" />
-          <h2 className="text-2xl font-bold text-gray-800">Questionnaire Complete!</h2>
-          <p className="text-gray-600">Thank you for completing all {questions.length} questions.</p>
-          <button
-            onClick={handleRestart}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Start Over
-          </button>
-        </div>
-      </div>
+      <FinalLoadingScreen/>
     );
   }
 

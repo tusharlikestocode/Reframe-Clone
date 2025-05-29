@@ -4,11 +4,11 @@
     "type": "reaction",
     "question": "I believe that changing my relationship with alcohol will significantly improve my overall well-being",
     "options": [
-      { "id": 1, "text": "✊" },
-      { "id": 2, "text": "👎" },
-      { "id": 3, "text": "🤷" },
-      { "id": 4, "text": "👍" },
-      { "id": 5, "text": "👏" }
+      { "id": 1, "text": "✊", "goto": 1, "prev": null },
+      { "id": 2, "text": "👎", "goto": 1, "prev": null },
+      { "id": 3, "text": "🤷", "goto": 1, "prev": null },
+      { "id": 4, "text": "👍", "goto": 1, "prev": null },
+      { "id": 5, "text": "👏", "goto": 1, "prev": null }
     ]
   },
   {
@@ -16,9 +16,14 @@
     "type": "single",
     "question": "How would you like to redefine your relationship with alcohol?",
     "options": [
-      { "id": "quit", "text": "🔚 Quit completely" },
-      { "id": "reduce", "text": "⬇️ Reduce consumption" },
-      { "id": "continue", "text": "🌱 Continue a sober lifestyle" }
+      { "id": "quit", "text": "🔚 Quit completely", "goto": 2, "prev": 0 },
+      { "id": "reduce", "text": "⬇️ Reduce consumption", "goto": 2, "prev": 0 },
+      {
+        "id": "continue",
+        "text": "🌱 Continue a sober lifestyle",
+        "goto": 10,
+        "prev": 0
+      }
     ]
   },
   {
@@ -26,11 +31,11 @@
     "type": "single",
     "question": "How old are you?",
     "options": [
-      { "id": "18-29", "text": "18-29" },
-      { "id": "30-39", "text": "30-39" },
-      { "id": "40-49", "text": "40-49" },
-      { "id": "50-59", "text": "50-59" },
-      { "id": "60+", "text": "60+" }
+      { "id": "18-29", "text": "18-29", "goto": 3, "prev": 1 },
+      { "id": "30-39", "text": "30-39", "goto": 3, "prev": 1 },
+      { "id": "40-49", "text": "40-49", "goto": 3, "prev": 1 },
+      { "id": "50-59", "text": "50-59", "goto": 3, "prev": 1 },
+      { "id": "60+", "text": "60+", "goto": 3, "prev": 1 }
     ]
   },
   {
@@ -38,13 +43,30 @@
     "type": "multi",
     "question": "During a typical week, how many days involve consuming alcohol?",
     "options": [
-      { "id": "daily", "text": "Every day—it's part of my daily routine" },
+      {
+        "id": "daily",
+        "text": "Every day—it's part of my daily routine",
+        "goto": 4,
+        "prev": 2
+      },
       {
         "id": "weekly",
-        "text": "Several days—particularly around midweek and weekends"
+        "text": "Several days—particularly around midweek and weekends",
+        "goto": 4,
+        "prev": 2
       },
-      { "id": "weekends", "text": "Once or twice—usually on weekends" },
-      { "id": "rarely", "text": "Rarely or never during the week" }
+      {
+        "id": "weekends",
+        "text": "Once or twice—usually on weekends",
+        "goto": 5,
+        "prev": 2
+      },
+      {
+        "id": "rarely",
+        "text": "Rarely or never during the week",
+        "goto": 6,
+        "prev": 2
+      }
     ]
   },
   {
@@ -52,16 +74,30 @@
     "type": "single",
     "question": "How frequently do you find yourself purchasing alcoholic beverages for home?",
     "options": [
-      { "id": "daily", "text": "I stock up regularly—it’s a staple at home" },
+      {
+        "id": "daily",
+        "text": "I stock up regularly—it's a staple at home",
+        "goto": 5,
+        "prev": 3
+      },
       {
         "id": "occasionally",
-        "text": "I buy some occasionally for certain moods"
+        "text": "I buy some occasionally for certain moods",
+        "goto": 5,
+        "prev": 3
       },
       {
         "id": "special",
-        "text": "Only for special occasions or when guests come over"
+        "text": "Only for special occasions or when guests come over",
+        "goto": 5,
+        "prev": 3
       },
-      { "id": "never", "text": "I don't typically purchase alcohol for home" }
+      {
+        "id": "never",
+        "text": "I don't typically purchase alcohol for home",
+        "goto": 5,
+        "prev": 3
+      }
     ]
   },
   {
@@ -69,13 +105,30 @@
     "type": "multi",
     "question": "How do you typically handle social events where alcohol is present?",
     "options": [
-      { "id": 1, "text": "I usually partake and enjoy many drinks" },
-      { "id": 2, "text": "I might have one or two drinks to be sociable" },
+      {
+        "id": 1,
+        "text": "I usually partake and enjoy many drinks",
+        "goto": 6,
+        "prev": 4
+      },
+      {
+        "id": 2,
+        "text": "I might have one or two drinks to be sociable",
+        "goto": 6,
+        "prev": 4
+      },
       {
         "id": 3,
-        "text": "I prefer non-alcoholic options but don't mind others drinking"
+        "text": "I prefer non-alcoholic options but don't mind others drinking",
+        "goto": 6,
+        "prev": 4
       },
-      { "id": 4, "text": "I avoid events where alcohol is the main focus" }
+      {
+        "id": 4,
+        "text": "I avoid events where alcohol is the main focus",
+        "goto": 6,
+        "prev": 4
+      }
     ]
   },
   {
@@ -83,9 +136,24 @@
     "type": "single",
     "question": "What's your biggest concern about alcohol use?",
     "options": [
-      { "id": "addiction", "text": "Developing dependency" },
-      { "id": "health_impact", "text": "Long-term health effects" },
-      { "id": "performance", "text": "Impact on work/life performance" }
+      {
+        "id": "addiction",
+        "text": "Developing dependency",
+        "goto": 7,
+        "prev": 5
+      },
+      {
+        "id": "health_impact",
+        "text": "Long-term health effects",
+        "goto": 7,
+        "prev": 5
+      },
+      {
+        "id": "performance",
+        "text": "Impact on work/life performance",
+        "goto": 7,
+        "prev": 5
+      }
     ]
   },
   {
@@ -93,12 +161,27 @@
     "type": "single",
     "question": "What best describes your current occupation or primary role?",
     "options": [
-      { "id": 1, "text": "💼 Employed (full-time or part-time)" },
-      { "id": 2, "text": "💻 Self-employed or freelancer" },
-      { "id": 3, "text": "🎓 Student" },
-      { "id": 4, "text": "🏠 Homemaker or primary caregiver" },
-      { "id": 5, "text": "🚀 Entrepreneur" },
-      { "id": 6, "text": "🌅 Retired" }
+      {
+        "id": 1,
+        "text": "💼 Employed (full-time or part-time)",
+        "goto": 10,
+        "prev": 6
+      },
+      {
+        "id": 2,
+        "text": "💻 Self-employed or freelancer",
+        "goto": 10,
+        "prev": 6
+      },
+      { "id": 3, "text": "🎓 Student", "goto": 10, "prev": 6 },
+      {
+        "id": 4,
+        "text": "🏠 Homemaker or primary caregiver",
+        "goto": 8,
+        "prev": 6
+      },
+      { "id": 5, "text": "🚀 Entrepreneur", "goto": 10, "prev": 6 },
+      { "id": 6, "text": "🌅 Retired", "goto": 8, "prev": 6 }
     ]
   },
   {
@@ -106,22 +189,35 @@
     "type": "multi",
     "question": "As a homemaker, how has retirement influenced your daily leisure activities? Our expertise can guide you in balancing lifestyle changes.",
     "options": [
-      { "id": 1, "text": "I have more time for hobbies and relaxation" },
+      {
+        "id": 1,
+        "text": "I have more time for hobbies and relaxation",
+        "goto": 9,
+        "prev": 7
+      },
       {
         "id": 2,
-        "text": "I feel a bit isolated and seek new social connections"
+        "text": "I feel a bit isolated and seek new social connections",
+        "goto": 9,
+        "prev": 7
       },
       {
         "id": 3,
-        "text": "I'm exploring new interests and learning opportunities"
+        "text": "I'm exploring new interests and learning opportunities",
+        "goto": 9,
+        "prev": 7
       },
       {
         "id": 4,
-        "text": "I find joy in spending quality time with family and friends"
+        "text": "I find joy in spending quality time with family and friends",
+        "goto": 9,
+        "prev": 7
       },
       {
         "id": 5,
-        "text": "I'm adjusting to a different routine and seeking purpose"
+        "text": "I'm adjusting to a different routine and seeking purpose",
+        "goto": 9,
+        "prev": 7
       }
     ]
   },
@@ -130,9 +226,9 @@
     "type": "single",
     "question": "Exploring new interests post-retirement? How does alcohol impact your mood and interactions at home? Let us support your journey.",
     "options": [
-      { "id": 1, "text": "Exercise and fitness" },
-      { "id": 2, "text": "Hobbies and creativity" },
-      { "id": 3, "text": "Quality time with family" }
+      { "id": 1, "text": "Exercise and fitness", "goto": 10, "prev": 8 },
+      { "id": 2, "text": "Hobbies and creativity", "goto": 10, "prev": 8 },
+      { "id": 3, "text": "Quality time with family", "goto": 10, "prev": 8 }
     ]
   },
   {
@@ -140,9 +236,24 @@
     "type": "single",
     "question": "What's your experience with previous attempts to change drinking habits?",
     "options": [
-      { "id": "first_time", "text": "This is my first attempt" },
-      { "id": "few_attempts", "text": "I've tried a few times" },
-      { "id": "many_attempts", "text": "I've tried many times" }
+      {
+        "id": "first_time",
+        "text": "This is my first attempt",
+        "goto": 11,
+        "prev": null
+      },
+      {
+        "id": "few_attempts",
+        "text": "I've tried a few times",
+        "goto": 16,
+        "prev": null
+      },
+      {
+        "id": "many_attempts",
+        "text": "I've tried many times",
+        "goto": 16,
+        "prev": null
+      }
     ]
   },
   {
@@ -150,9 +261,24 @@
     "type": "single",
     "question": "How confident are you in your ability to achieve your goal?",
     "options": [
-      { "id": "very_confident", "text": "Very confident" },
-      { "id": "somewhat_confident", "text": "Somewhat confident" },
-      { "id": "not_confident", "text": "Not very confident" }
+      {
+        "id": "very_confident",
+        "text": "Very confident",
+        "goto": 12,
+        "prev": 10
+      },
+      {
+        "id": "somewhat_confident",
+        "text": "Somewhat confident",
+        "goto": 12,
+        "prev": 10
+      },
+      {
+        "id": "not_confident",
+        "text": "Not very confident",
+        "goto": 15,
+        "prev": 10
+      }
     ]
   },
   {
@@ -160,9 +286,24 @@
     "type": "single",
     "question": "What type of support would be most helpful for you?",
     "options": [
-      { "id": "app_tracking", "text": "App-based tracking" },
-      { "id": "community", "text": "Community support" },
-      { "id": "professional", "text": "Professional counseling" }
+      {
+        "id": "app_tracking",
+        "text": "App-based tracking",
+        "goto": 13,
+        "prev": 11
+      },
+      {
+        "id": "community",
+        "text": "Community support",
+        "goto": 13,
+        "prev": 11
+      },
+      {
+        "id": "professional",
+        "text": "Professional counseling",
+        "goto": 15,
+        "prev": 11
+      }
     ]
   },
   {
@@ -170,9 +311,24 @@
     "type": "multi",
     "question": "How important is it for you to track your progress?",
     "options": [
-      { "id": "very_important", "text": "Very important" },
-      { "id": "somewhat_important", "text": "Somewhat important" },
-      { "id": "not_important", "text": "Not very important" }
+      {
+        "id": "very_important",
+        "text": "Very important",
+        "goto": 14,
+        "prev": 12
+      },
+      {
+        "id": "somewhat_important",
+        "text": "Somewhat important",
+        "goto": 14,
+        "prev": 12
+      },
+      {
+        "id": "not_important",
+        "text": "Not very important",
+        "goto": 17,
+        "prev": 12
+      }
     ]
   },
   {
@@ -180,11 +336,23 @@
     "type": "single",
     "question": "What's your preferred way to celebrate milestones?",
     "options": [
-      { "id": "treat_yourself", "text": "Treat yourself to something special" },
-      { "id": "share_achievement", "text": "Share achievement with others" },
+      {
+        "id": "treat_yourself",
+        "text": "Treat yourself to something special",
+        "goto": 17,
+        "prev": 13
+      },
+      {
+        "id": "share_achievement",
+        "text": "Share achievement with others",
+        "goto": 17,
+        "prev": 13
+      },
       {
         "id": "private_reflection",
-        "text": "Private reflection and journaling"
+        "text": "Private reflection and journaling",
+        "goto": 17,
+        "prev": 13
       }
     ]
   },
@@ -193,9 +361,24 @@
     "type": "multi",
     "question": "How do you typically handle stress without alcohol?",
     "options": [
-      { "id": "exercise", "text": "Exercise or physical activity" },
-      { "id": "meditation", "text": "Meditation or mindfulness" },
-      { "id": "struggling", "text": "I struggle with this" }
+      {
+        "id": "exercise",
+        "text": "Exercise or physical activity",
+        "goto": 17,
+        "prev": null
+      },
+      {
+        "id": "meditation",
+        "text": "Meditation or mindfulness",
+        "goto": 17,
+        "prev": null
+      },
+      {
+        "id": "struggling",
+        "text": "I struggle with this",
+        "goto": 16,
+        "prev": null
+      }
     ]
   },
   {
@@ -203,9 +386,24 @@
     "type": "single",
     "question": "What's your biggest fear about changing your relationship with alcohol?",
     "options": [
-      { "id": "social_isolation", "text": "Social isolation" },
-      { "id": "missing_out", "text": "Missing out on experiences" },
-      { "id": "handling_emotions", "text": "Difficulty handling emotions" }
+      {
+        "id": "social_isolation",
+        "text": "Social isolation",
+        "goto": 17,
+        "prev": null
+      },
+      {
+        "id": "missing_out",
+        "text": "Missing out on experiences",
+        "goto": 17,
+        "prev": null
+      },
+      {
+        "id": "handling_emotions",
+        "text": "Difficulty handling emotions",
+        "goto": 17,
+        "prev": null
+      }
     ]
   },
   {
@@ -213,9 +411,24 @@
     "type": "single",
     "question": "How do you want to feel one month from now?",
     "options": [
-      { "id": "energetic", "text": "More energetic and clear-minded" },
-      { "id": "in_control", "text": "More in control of my choices" },
-      { "id": "proud", "text": "Proud of my progress" }
+      {
+        "id": "energetic",
+        "text": "More energetic and clear-minded",
+        "goto": 18,
+        "prev": null
+      },
+      {
+        "id": "in_control",
+        "text": "More in control of my choices",
+        "goto": 18,
+        "prev": null
+      },
+      {
+        "id": "proud",
+        "text": "Proud of my progress",
+        "goto": 18,
+        "prev": null
+      }
     ]
   },
   {
@@ -223,9 +436,24 @@
     "type": "single",
     "question": "What's your ideal weekend without alcohol?",
     "options": [
-      { "id": "active", "text": "Active and adventurous" },
-      { "id": "relaxing", "text": "Peaceful and relaxing" },
-      { "id": "productive", "text": "Productive and fulfilling" }
+      {
+        "id": "active",
+        "text": "Active and adventurous",
+        "goto": 19,
+        "prev": 17
+      },
+      {
+        "id": "relaxing",
+        "text": "Peaceful and relaxing",
+        "goto": 19,
+        "prev": 17
+      },
+      {
+        "id": "productive",
+        "text": "Productive and fulfilling",
+        "goto": 19,
+        "prev": 17
+      }
     ]
   },
   {
@@ -233,9 +461,24 @@
     "type": "multi",
     "question": "How do you want to be remembered by your loved ones?",
     "options": [
-      { "id": "present", "text": "As someone who was truly present" },
-      { "id": "inspiring", "text": "As someone who inspired positive change" },
-      { "id": "reliable", "text": "As someone reliable and trustworthy" }
+      {
+        "id": "present",
+        "text": "As someone who was truly present",
+        "goto": 20,
+        "prev": 18
+      },
+      {
+        "id": "inspiring",
+        "text": "As someone who inspired positive change",
+        "goto": 20,
+        "prev": 18
+      },
+      {
+        "id": "reliable",
+        "text": "As someone reliable and trustworthy",
+        "goto": 20,
+        "prev": 18
+      }
     ]
   },
   {
@@ -243,9 +486,24 @@
     "type": "single",
     "question": "What's the most important thing you want to achieve through this journey?",
     "options": [
-      { "id": "self_respect", "text": "Regain self-respect and confidence" },
-      { "id": "better_relationships", "text": "Build better relationships" },
-      { "id": "health_longevity", "text": "Improve health and longevity" }
+      {
+        "id": "self_respect",
+        "text": "Regain self-respect and confidence",
+        "goto": null,
+        "prev": 19
+      },
+      {
+        "id": "better_relationships",
+        "text": "Build better relationships",
+        "goto": null,
+        "prev": 19
+      },
+      {
+        "id": "health_longevity",
+        "text": "Improve health and longevity",
+        "goto": null,
+        "prev": 19
+      }
     ]
   }
 ]

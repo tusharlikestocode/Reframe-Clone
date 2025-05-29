@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import BackButton from "../common/BackButton";
-
+import Harvardlogo from "../../assets/Harvard_University_coat_of_arms.svg.png"
 const FinalLoadingScreen = () => {
   const [progressStages, setProgressStages] = useState([0, 0, 0, 0, 0]);
   const [currentStage, setCurrentStage] = useState(0);
@@ -163,6 +163,22 @@ const FinalLoadingScreen = () => {
           </div>
         </DialogContent>
       </Dialog>
+
+       <div className="bg-white shadow-lg rounded-2xl p-6 mt-8 max-w-xl mx-auto animate-fade-in">
+  <div className="flex flex-row justify-center items-center space-x-6">
+    <p className="text-sm text-justify text-gray-600 max-w-xs">
+      Approach certified by Harvard Medical School. Complies with
+      requirements of healthcare professionals and providers.
+    </p>
+    <img
+      src={Harvardlogo}
+      alt="Harvard Medical School"
+      className="w-20 h-20"
+    />
+  </div>
+</div>
+
+
     </div>
   );
 };

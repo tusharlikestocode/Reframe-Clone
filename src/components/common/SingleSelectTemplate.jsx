@@ -34,13 +34,14 @@ const SingleSelectTemplate = ({
 
       {/* Loading Animation */}
       {isLoading && (
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-8">
           <div className="w-6 h-6 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin duration-500"></div>
         </div>
       )}
 
+      {/* Response Message */}
       {showResponseReceived && (
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-8">
           <p className="text-gray-500 text-sm">Response received</p>
         </div>
       )}

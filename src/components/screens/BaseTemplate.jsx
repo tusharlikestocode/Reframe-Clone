@@ -12,7 +12,7 @@ const BaseTemplate = () => {
   const [questions, setQuestions] = useState(questionsData);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
-  const [isComplete, setIsComplete] = useState(false);
+  const [isComplete, setIsComplete] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [showResponseReceived, setShowResponseReceived] = useState(false);
   const [hasSeenMidwayScreen, setHasSeenMidwayScreen] = useState(false);

@@ -63,7 +63,7 @@
   },
   {
     "id": 2,
-    "type": "multiple",
+    "type": "multi",
     "question": "When you think about making positive changes in your life, which of these outcomes excites you the most?",
     "options": [
       {
@@ -187,7 +187,7 @@
   },
   {
     "id": 6,
-    "type": "multiple",
+    "type": "multi",
     "question": "Which types of alcoholic beverages do you typically enjoy?",
     "options": [
       {
@@ -242,7 +242,7 @@
   },
   {
     "id": 7,
-    "type": "multiple",
+    "type": "multi",
     "question": "What influences your choice of alcoholic beverages?",
     "options": [
       {
@@ -339,7 +339,7 @@
     ]
   },{
     "id": 9,
-    "type": "multiple",
+    "type": "multi",
     "question": "As someone who is employed, how does your job influence your daily routines and personal time?",
     "options": [
       { "id": "work_hours", "text": "I structure my day around work hours", "goto": 15, "prev": 8 },
@@ -351,7 +351,7 @@
   },
   {
     "id": 10,
-    "type": "multiple",
+    "type": "multi",
     "question": "As a self-employed individual, how does freelancing shape your lifestyle?",
     "options": [
       { "id": "flexibility", "text": "I enjoy the flexibility to design my own schedule", "goto": 15, "prev": 8 },
@@ -363,7 +363,7 @@
   },
   {
     "id": 11,
-    "type": "multiple",
+    "type": "multi",
     "question": "As a student, how do your academic responsibilities affect your daily life?",
     "options": [
       { "id": "study_hours", "text": "I dedicate most of my time to studying or classes", "goto": 15, "prev": 8 },
@@ -375,7 +375,7 @@
   },
   {
     "id": 12,
-    "type": "multiple",
+    "type": "multi",
     "question": "As a homemaker or caregiver, how do your responsibilities shape your routine?",
     "options": [
       { "id": "family_focus", "text": "Most of my time is dedicated to family needs", "goto": 15, "prev": 8 },
@@ -387,7 +387,7 @@
   },
   {
     "id": 13,
-    "type": "multiple",
+    "type": "multi",
     "question": "As an entrepreneur, how does running a business impact your lifestyle?",
     "options": [
       { "id": "long_hours", "text": "I often work long or irregular hours", "goto": 15, "prev": 8 },
@@ -399,7 +399,7 @@
   },
   {
     "id": 14,
-    "type": "multiple",
+    "type": "multi",
     "question": "As a retired individual, how has retirement influenced your daily routines involving leisure activities?",
     "options": [
       { "id": "hobbies", "text": "I have more time for hobbies and relaxation", "goto": 15, "prev": 8 },
@@ -410,7 +410,7 @@
     ]
   },{
   "id": 15,
-  "type": "multiple",
+  "type": "multi",
   "question": "With your balanced routine, how does alcohol consumption affect your patience or mood with those you live with?",
   "options": [
     { "id": "composure", "text": "I maintain composure and positive interactions", "goto": 16, "prev": 8 },
@@ -419,342 +419,653 @@
     { "id": "communication", "text": "I prioritize open communication and understanding", "goto": 16, "prev": 8 },
     { "id": "coping_strategies", "text": "I seek healthier coping strategies for stress", "goto": 16, "prev": 8 }
   ]
-},
-  {
-    "id": 8,
-    "type": "multi",
-    "question": "As a homemaker, how has retirement influenced your daily leisure activities? Our expertise can guide you in balancing lifestyle changes.",
-    "options": [
-      {
-        "id": 1,
-        "text": "I have more time for hobbies and relaxation",
-        "goto": 9,
-        "prev": 7
-      },
-      {
-        "id": 2,
-        "text": "I feel a bit isolated and seek new social connections",
-        "goto": 9,
-        "prev": 7
-      },
-      {
-        "id": 3,
-        "text": "I'm exploring new interests and learning opportunities",
-        "goto": 9,
-        "prev": 7
-      },
-      {
-        "id": 4,
-        "text": "I find joy in spending quality time with family and friends",
-        "goto": 9,
-        "prev": 7
-      },
-      {
-        "id": 5,
-        "text": "I'm adjusting to a different routine and seeking purpose",
-        "goto": 9,
-        "prev": 7
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "type": "single",
-    "question": "Exploring new interests post-retirement? How does alcohol impact your mood and interactions at home? Let us support your journey.",
-    "options": [
-      {
-        "id": 1,
-        "text": "Exercise and fitness",
-        "goto": 10,
-        "prev": 8
-      },
-      {
-        "id": 2,
-        "text": "Hobbies and creativity",
-        "goto": 10,
-        "prev": 8
-      },
-      {
-        "id": 3,
-        "text": "Quality time with family",
-        "goto": 10,
-        "prev": 8
-      }
-    ]
-  },
-  {
-    "id": 10,
-    "type": "single",
-    "question": "What's your experience with previous attempts to change drinking habits?",
-    "options": [
-      {
-        "id": "first_time",
-        "text": "This is my first attempt",
-        "goto": 11,
-        "prev": null
-      },
-      {
-        "id": "few_attempts",
-        "text": "I've tried a few times",
-        "goto": 16,
-        "prev": null
-      },
-      {
-        "id": "many_attempts",
-        "text": "I've tried many times",
-        "goto": 16,
-        "prev": null
-      }
-    ]
-  },
-  {
-    "id": 11,
-    "type": "single",
-    "question": "How confident are you in your ability to achieve your goal?",
-    "options": [
-      {
-        "id": "very_confident",
-        "text": "Very confident",
-        "goto": 12,
-        "prev": 10
-      },
-      {
-        "id": "somewhat_confident",
-        "text": "Somewhat confident",
-        "goto": 12,
-        "prev": 10
-      },
-      {
-        "id": "not_confident",
-        "text": "Not very confident",
-        "goto": 15,
-        "prev": 10
-      }
-    ]
-  },
-  {
-    "id": 12,
-    "type": "single",
-    "question": "What type of support would be most helpful for you?",
-    "options": [
-      {
-        "id": "app_tracking",
-        "text": "App-based tracking",
-        "goto": 13,
-        "prev": 11
-      },
-      {
-        "id": "community",
-        "text": "Community support",
-        "goto": 13,
-        "prev": 11
-      },
-      {
-        "id": "professional",
-        "text": "Professional counseling",
-        "goto": 15,
-        "prev": 11
-      }
-    ]
-  },
-  {
-    "id": 13,
-    "type": "multi",
-    "question": "How important is it for you to track your progress?",
-    "options": [
-      {
-        "id": "very_important",
-        "text": "Very important",
-        "goto": 14,
-        "prev": 12
-      },
-      {
-        "id": "somewhat_important",
-        "text": "Somewhat important",
-        "goto": 14,
-        "prev": 12
-      },
-      {
-        "id": "not_important",
-        "text": "Not very important",
-        "goto": 17,
-        "prev": 12
-      }
-    ]
-  },
-  {
-    "id": 14,
-    "type": "single",
-    "question": "What's your preferred way to celebrate milestones?",
-    "options": [
-      {
-        "id": "treat_yourself",
-        "text": "Treat yourself to something special",
-        "goto": 17,
-        "prev": 13
-      },
-      {
-        "id": "share_achievement",
-        "text": "Share achievement with others",
-        "goto": 17,
-        "prev": 13
-      },
-      {
-        "id": "private_reflection",
-        "text": "Private reflection and journaling",
-        "goto": 17,
-        "prev": 13
-      }
-    ]
-  },
-  {
-    "id": 15,
-    "type": "multi",
-    "question": "How do you typically handle stress without alcohol?",
-    "options": [
-      {
-        "id": "exercise",
-        "text": "Exercise or physical activity",
-        "goto": 17,
-        "prev": null
-      },
-      {
-        "id": "meditation",
-        "text": "Meditation or mindfulness",
-        "goto": 17,
-        "prev": null
-      },
-      {
-        "id": "struggling",
-        "text": "I struggle with this",
-        "goto": 16,
-        "prev": null
-      }
-    ]
-  },
-  {
+},{
     "id": 16,
     "type": "single",
-    "question": "What's your biggest fear about changing your relationship with alcohol?",
+    "question": "With your balanced routine, how does alcohol consumption affect your patience or mood with those you live with?",
     "options": [
-      {
-        "id": "social_isolation",
-        "text": "Social isolation",
-        "goto": 17,
-        "prev": null
-      },
-      {
-        "id": "missing_out",
-        "text": "Missing out on experiences",
-        "goto": 17,
-        "prev": null
-      },
-      {
-        "id": "handling_emotions",
-        "text": "Difficulty handling emotions",
-        "goto": 17,
-        "prev": null
-      }
+        {
+            "id": "composure",
+            "text": "Maintain composure and positive interactions",
+            "goto": 17,
+            "prev": 15
+        },
+        {
+            "id": "irritability",
+            "text": "Notice increased irritability or impatience",
+            "goto": 17,
+            "prev": 15
+        },
+        {
+            "id": "communication",
+            "text": "Prioritize open communication and understanding",
+            "goto": 17,
+            "prev": 15
+        },
+        {
+            "id": "strategies",
+            "text": "Seek healthier coping strategies for stress",
+            "goto": 17,
+            "prev": 15
+        }
     ]
-  },
-  {
+   
+},{
     "id": 17,
     "type": "single",
-    "question": "How do you want to feel one month from now?",
+    "question": "What best describes your current family status?",
     "options": [
-      {
-        "id": "energetic",
-        "text": "More energetic and clear-minded",
-        "goto": 18,
-        "prev": null
-      },
-      {
-        "id": "in_control",
-        "text": "More in control of my choices",
-        "goto": 18,
-        "prev": null
-      },
-      {
-        "id": "proud",
-        "text": "Proud of my progress",
-        "goto": 18,
-        "prev": null
-      }
+        {
+            "id": "single",
+            "text": "Single",
+            "goto": 18,
+            "prev": 16
+        },
+        {
+            "id": "relationship",
+            "text": "In a relationship",
+            "goto": 18,
+            "prev": 16
+        },
+        {
+            "id": "married",
+            "text": "Married",
+            "goto": 18,
+            "prev": 16
+        },
+        {
+            "id": "divorced",
+            "text": "Divorced",
+            "goto": 18,
+            "prev": 16
+        },
+        {
+            "id": "widowed",
+            "text": "Widowed",
+            "goto": 18,
+            "prev": 16
+        },
+        {
+            "id": "coparenting",
+            "text": "Co-parenting",
+            "goto": 18,
+            "prev": 16
+        },
+        {
+            "id": "living_with_family",
+            "text": "Living with family (parents, siblings, or others)",
+            "goto": 18,
+            "prev": 16
+        },
+        {
+            "id": "other",
+            "text": "Other",
+            "goto": 18,
+            "prev": 16
+        }
     ]
-  },
-  {
+},{
     "id": 18,
-    "type": "single",
-    "question": "What's your ideal weekend without alcohol?",
+    "type": "multi",
+    "question": "How has your alcohol consumption changed since your loss?",
     "options": [
-      {
-        "id": "active",
-        "text": "Active and adventurous",
-        "goto": 19,
-        "prev": 17
-      },
-      {
-        "id": "relaxing",
-        "text": "Peaceful and relaxing",
-        "goto": 19,
-        "prev": 17
-      },
-      {
-        "id": "productive",
-        "text": "Productive and fulfilling",
-        "goto": 19,
-        "prev": 17
-      }
+        {
+            "id": "drink_less",
+            "text": "I drink less or have stopped drinking altogether to focus on healing",
+            "goto": 19,
+            "prev": 17
+        },
+        {
+            "id": "same",
+            "text": "My drinking habits have remained about the same as before",
+            "goto": 19,
+            "prev": 17
+        },
+        {
+            "id": "slightly_more",
+            "text": "I find myself drinking slightly more than I used to",
+            "goto": 19,
+            "prev": 17
+        },
+        {
+            "id": "increased_significantly",
+            "text": "My alcohol consumption has increased significantly as a way to cope",
+            "goto": 19,
+            "prev": 17
+        }
     ]
-  },
-  {
+},{
     "id": 19,
     "type": "multi",
-    "question": "How do you want to be remembered by your loved ones?",
+    "question": "Have you experienced any of the following symptoms consistently for more than a week?",
+    "note": "You can select multiple options.",
     "options": [
-      {
-        "id": "present",
-        "text": "As someone who was truly present",
-        "goto": 20,
-        "prev": 18
-      },
-      {
-        "id": "inspiring",
-        "text": "As someone who inspired positive change",
-        "goto": 20,
-        "prev": 18
-      },
-      {
-        "id": "reliable",
-        "text": "As someone reliable and trustworthy",
-        "goto": 20,
-        "prev": 18
-      }
+        {
+            "id": "sadness",
+            "text": "Persistent feelings of sadness or emptiness",
+            "goto": 20,
+            "prev": 18
+        },
+        {
+            "id": "anhedonia",
+            "text": "Loss of interest in activities you once enjoyed",
+            "goto": 20,
+            "prev": 18
+        },
+        {
+            "id": "appetite_changes",
+            "text": "Significant changes in appetite or weight",
+            "goto": 20,
+            "prev": 18
+        },
+        {
+            "id": "sleep_changes",
+            "text": "Difficulty sleeping or sleeping too much",
+            "goto": 20,
+            "prev": 18
+        },
+        {
+            "id": "worry",
+            "text": "Feelings of excessive worry or fear",
+            "goto": 20,
+            "prev": 18
+        },
+        {
+            "id": "concentration",
+            "text": "Trouble concentrating or making decisions",
+            "goto": 20,
+            "prev": 18
+        },
+        {
+            "id": "none",
+            "text": "None of the above",
+            "goto": 20,
+            "prev": 18
+        }
     ]
-  },
-  {
+},{
     "id": 20,
     "type": "single",
-    "question": "What's the most important thing you want to achieve through this journey?",
+    "question": "Based on your alcohol consumption patterns, how would you describe your typical drinking habits during a regular day?",
     "options": [
-      {
-        "id": "self_respect",
-        "text": "Regain self-respect and confidence",
-        "goto": null,
-        "prev": 19
-      },
-      {
-        "id": "better_relationships",
-        "text": "Build better relationships",
-        "goto": null,
-        "prev": 19
-      },
-      {
-        "id": "health_longevity",
-        "text": "Improve health and longevity",
-        "goto": null,
-        "prev": 19
-      }
+        {
+            "id": "rarely",
+            "text": "I rarely drink alcohol during the day",
+            "goto": 21,
+            "prev": 19
+        },
+        {
+            "id": "occasionally_meals",
+            "text": "I have a drink occasionally with meals",
+            "goto": 21,
+            "prev": 19
+        },
+        {
+            "id": "few_drinks",
+            "text": "I tend to have a few drinks throughout the day",
+            "goto": 21,
+            "prev": 19
+        },
+        {
+            "id": "frequently_afternoon",
+            "text": "I frequently consume alcohol starting from the afternoon",
+            "goto": 21,
+            "prev": 19
+        },
+        {
+            "id": "consistently_all_day",
+            "text": "I consistently drink alcohol from morning till night",
+            "goto": 21,
+            "prev": 19
+        }
     ]
-  }
+},{
+    "id": 21,
+    "type": "single",
+    "question": "Struggling with data? Let's fix it!",
+    "options": [
+        {
+            "id": "support_1",
+            "text": "I got you! Let's tackle this together.",
+            "goto": 22,
+            "prev": 20
+        },
+        {
+            "id": "support_2",
+            "text": "No worries, we'll figure it out step by step.",
+            "goto": 22,
+            "prev": 20
+        },
+        {
+            "id": "support_3",
+            "text": "Don't stress, I'm here to help simplify things.",
+            "goto": 22,
+            "prev": 20
+        },
+        {
+            "id": "support_4",
+            "text": "Let's break it down into manageable chunks.",
+            "goto": 22,
+            "prev": 20
+        },
+        {
+            "id": "support_5",
+            "text": "You're not alone, we'll make sense of it.",
+            "goto": 22,
+            "prev": 20
+        }
+    ]
+},{
+    "id": 22,
+    "type": "single",
+    "question": "To improve your health, let's focus on sleep habits.",
+    "options": [
+        {
+            "id": "optimal_sleep",
+            "text": "I get a solid 7-8 hours of sleep every night",
+            "goto": 23,
+            "prev": 21
+        },
+        {
+            "id": "moderate_sleep",
+            "text": "I usually get 5-6 hours of sleep on average",
+            "goto": 23,
+            "prev": 21
+        },
+        {
+            "id": "variable_sleep",
+            "text": "My sleep varies, sometimes 4-5 hours, other times 7-8 hours",
+            "goto": 23,
+            "prev": 21
+        },
+        {
+            "id": "insufficient_sleep",
+            "text": "I struggle to get more than 4 hours of sleep per night",
+            "goto": 23,
+            "prev": 21
+        },
+        {
+            "id": "inconsistent_sleep",
+            "text": "My sleep is inconsistent, ranging from 3-6 hours",
+            "goto": 23,
+            "prev": 21
+        }
+    ]
+},{
+    "id": 23,
+    "type": "multi",
+    "question": "Let's work on improving your sleep for better well-being.",
+    "options": [
+        {
+            "id": "restful_sleep",
+            "text": "I typically have restful and uninterrupted sleep",
+            "goto": 24,
+            "prev": 22
+        },
+        {
+            "id": "disrupted_sleep",
+            "text": "My sleep is often disrupted, affecting my restfulness",
+            "goto": 24,
+            "prev": 22
+        },
+        {
+            "id": "falling_asleep",
+            "text": "I struggle with falling asleep and staying asleep",
+            "goto": 24,
+            "prev": 22
+        },
+        {
+            "id": "nightmares",
+            "text": "I experience frequent nightmares or night terrors",
+            "goto": 24,
+            "prev": 22
+        },
+        {
+            "id": "variable_quality",
+            "text": "My sleep quality varies, some nights better than others",
+            "goto": 24,
+            "prev": 22
+        }
+    ]
+},{
+    "id": 24,
+    "type": "multi",
+    "question": "Which types of non-alcoholic beverages do you typically enjoy during the day?",
+    "options": [
+        {
+            "id": "coffee_tea",
+            "text": "Coffee or Tea",
+            "goto": 25,
+            "prev": 23
+        },
+        {
+            "id": "sparkling_water",
+            "text": "Sparkling Water or Flavored Water",
+            "goto": 25,
+            "prev": 23
+        },
+        {
+            "id": "juices_smoothies",
+            "text": "Juices or Smoothies",
+            "goto": 25,
+            "prev": 23
+        },
+        {
+            "id": "sodas",
+            "text": "Sodas or Soft Drinks",
+            "goto": 25,
+            "prev": 23
+        },
+        {
+            "id": "energy_drinks",
+            "text": "Energy Drink",
+            "goto": 25,
+            "prev": 23
+        },
+        {
+            "id": "milk_alternatives",
+            "text": "Milk or Plant-Based Alternatives",
+            "goto": 25,
+            "prev": 23
+        },
+        {
+            "id": "kombucha",
+            "text": "Kombucha or Fermented Beverages",
+            "goto": 25,
+            "prev": 23
+        },
+        {
+            "id": "herbal_infusions",
+            "text": "Herbal Infusions or Specialty Drinks",
+            "goto": 25,
+            "prev": 23
+        }
+    ]
+},{
+    "id": 25,
+    "type": "single",
+    "question": "Which statement best describes your current involvement in physical activity or exercise?",
+    "options": [
+        {
+            "id": "regular_routine",
+            "text": "I have a regular exercise routine that I follow consistently",
+            "goto": 26,
+            "prev": 24
+        },
+        {
+            "id": "occasional_exercise",
+            "text": "I exercise occasionally but find it hard to maintain a routine",
+            "goto": 26,
+            "prev": 24
+        },
+        {
+            "id": "interested_inactive",
+            "text": "I don't exercise regularly but am interested in becoming more active",
+            "goto": 26,
+            "prev": 24
+        },
+        {
+            "id": "not_active",
+            "text": "Physical activity isn't a significant part of my life right now",
+            "goto": 26,
+            "prev": 24
+        }
+    ]
+},{
+    "id": 26,
+    "type": "multi",
+    "question": "How do you feel after engaging in physical activity or exercise?",
+    "options": [
+        {
+            "id": "energized",
+            "text": "Energized and uplifted—it boosts my mood and vitality",
+            "goto": 27,
+            "prev": 25
+        },
+        {
+            "id": "relaxed",
+            "text": "Relaxed and calm—it helps me unwind",
+            "goto": 27,
+            "prev": 25
+        },
+        {
+            "id": "accomplished",
+            "text": "Tired but accomplished—I enjoy the sense of achievement",
+            "goto": 27,
+            "prev": 25
+        },
+        {
+            "id": "neutral",
+            "text": "Neutral—I don't notice a significant change",
+            "goto": 27,
+            "prev": 25
+        }
+    ]
+},{
+    "id": 27,
+    "type": "multi",
+    "question": "Have you previously tried to reduce or stop drinking alcohol?",
+    "options": [
+        {
+            "id": "multiple_attempts",
+            "text": "Yes, I've made multiple attempts to reduce or quit",
+            "goto": 28,
+            "prev": 26
+        },
+        {
+            "id": "few_attempts",
+            "text": "Yes, I've tried once or twice before",
+            "goto": 28,
+            "prev": 26
+        },
+        {
+            "id": "first_time",
+            "text": "No, this is my first time considering it",
+            "goto": 28,
+            "prev": 26
+        },
+        {
+            "id": "currently_trying",
+            "text": "I'm currently trying to reduce or quit for the first time",
+            "goto": 28,
+            "prev": 26
+        }
+    ]
+},{
+    "id": 28,
+    "type": "multi",
+    "question": "What was the longest period you successfully reduced or abstained from alcohol during your past attempts?",
+    "options": [
+        {
+            "id": "few_days",
+            "text": "A few days",
+            "goto": 29,
+            "prev": 27
+        },
+        {
+            "id": "few_weeks",
+            "text": "A few weeks",
+            "goto": 29,
+            "prev": 27
+        },
+        {
+            "id": "few_months",
+            "text": "A few months",
+            "goto": 29,
+            "prev": 27
+        },
+        {
+            "id": "six_months_plus",
+            "text": "Six months or more",
+            "goto": 29,
+            "prev": 27
+        },
+        {
+            "id": "no_attempt",
+            "text": "I haven't attempted to reduce or quit before",
+            "goto": 29,
+            "prev": 27
+        }
+    ]
+},{
+    "id": 29,
+    "type": "reaction",
+    "question": "I believe that changing my relationship with alcohol will significantly improve my overall well-being",
+    "options": [
+      { "id": 1, "text": "✊", "goto": 30, "prev": 28 },
+      { "id": 2, "text": "👎", "goto": 30, "prev": 28 },
+      { "id": 3, "text": "🤷", "goto": 30, "prev": 28 },
+      { "id": 4, "text": "👍", "goto": 30, "prev": 28 },
+      { "id": 5, "text": "👏", "goto": 30, "prev": 28 }
+    ]
+  },{
+    "id": 30,
+    "type": "reaction",
+    "question": "Inspirational stories of others who have reduced or quit alcohol encourage me on my own",
+    "options": [
+      { "id": 1, "text": "✊", "goto": 31, "prev": 29 },
+      { "id": 2, "text": "👎", "goto": 31, "prev": 29 },
+      { "id": 3, "text": "🤷", "goto": 31, "prev": 29 },
+      { "id": 4, "text": "👍", "goto": 31, "prev": 29 },
+      { "id": 5, "text": "👏", "goto": 31, "prev": 29 }
+    ]
+  },{
+    "id": 31,
+    "type": "reaction",
+    "question": "Having access to motivational quotes or affirmations inspires me to overcome challenges",
+    "options": [
+      { "id": 1, "text": "✊", "goto": 32, "prev": 30 },
+      { "id": 2, "text": "👎", "goto": 32, "prev": 30 },
+      { "id": 3, "text": "🤷", "goto": 32, "prev": 30 },
+      { "id": 4, "text": "👍", "goto": 32, "prev": 30 },
+      { "id": 5, "text": "👏", "goto": 32, "prev": 30 }
+    ]
+  },{
+    "id": 32,
+    "type": "reaction",
+    "question": "I find that tracking my progress and reaching specific milestones keeps me motivated on my journey",
+    "options": [
+      { "id": 1, "text": "✊", "goto": 33, "prev": 31 },
+      { "id": 2, "text": "👎", "goto": 33, "prev": 31 },
+      { "id": 3, "text": "🤷", "goto": 33, "prev": 31 },
+      { "id": 4, "text": "👍", "goto": 33, "prev": 31 },
+      { "id": 5, "text": "👏", "goto": 33, "prev": 31 }
+    ]
+  },{
+    "id": 33,
+    "type": "single",
+    "question": "Which type of content format do you find most engaging when learning or exploring new things?",
+    "options": [
+        {
+            "id": "interactive",
+            "text": "Interactive activities or challenges that keep me actively involved",
+            "goto": 34,
+            "prev": 32
+        },
+        {
+            "id": "articles",
+            "text": "Short articles or tips that I can quickly read and apply",
+            "goto": 34,
+            "prev": 32
+        },
+        {
+            "id": "video",
+            "text": "Video content or animations that visually bring concepts to life",
+            "goto": 34,
+            "prev": 32
+        },
+        {
+            "id": "audio",
+            "text": "Audio content like podcasts or guided sessions that I can listen to on the go",
+            "goto": 34,
+            "prev": 32
+        }
+    ]
+},{
+    "id": 34,
+    "type": "multi",
+    "question": "What kind of support system resonates most with you during personal growth journeys?",
+    "options": [
+        {
+            "id": "expert_coaching",
+            "text": "One-on-one coaching or personalized guidance from experts",
+            "goto": 35,
+            "prev": 33
+        },
+        {
+            "id": "peer_community",
+            "text": "Encouragement and accountability from a community of peers",
+            "goto": 35,
+            "prev": 33
+        },
+        {
+            "id": "self_guided",
+            "text": "Self-guided support with resources I can explore independently",
+            "goto": 35,
+            "prev": 33
+        },
+        {
+            "id": "combined_approach",
+            "text": "A combination of community interaction and expert advice",
+            "goto": 35,
+            "prev": 33
+        }
+    ]
+},{
+    "id": 35,
+    "type": "multi",
+    "question": "What additional goals would you like to achieve with us?",
+    "options": [
+        {
+            "id": "physical_health",
+            "text": "Improve physical health",
+            "goto": 36,
+            "prev": null
+        },
+        {
+            "id": "mental_wellbeing",
+            "text": "Enhance mental well-being",
+            "goto": 36,
+            "prev": null
+        },
+        {
+            "id": "healthy_eating",
+            "text": "Eat healthier",
+            "goto": 36,
+            "prev": null
+        },
+        {
+            "id": "energy_boost",
+            "text": "Boost energy",
+            "goto": 36,
+            "prev": null
+        },
+        {
+            "id": "productivity",
+            "text": "Increase productivity",
+            "goto": 36,
+            "prev": null
+        },
+        {
+            "id": "relationships",
+            "text": "Strengthen relationships",
+            "goto": 36,
+            "prev": null
+        },
+        {
+            "id": "hobbies",
+            "text": "Explore new hobbies",
+            "goto": 36,
+            "prev": null
+        },
+        {
+            "id": "better_sleep",
+            "text": "Sleep better",
+            "goto": 36,
+            "prev": null
+        }
+    ]
+    
+}
+ 
 ]

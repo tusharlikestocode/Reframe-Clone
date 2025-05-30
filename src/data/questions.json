@@ -1,46 +1,100 @@
 [
   {
     "id": 0,
-    "type": "reaction",
-    "question": "I believe that changing my relationship with alcohol will significantly improve my overall well-being",
+    "type": "single",
+    "question": "How would you like to redefine your relationship with alcohol?",
     "options": [
-      { "id": 1, "text": "✊", "goto": 1, "prev": null },
-      { "id": 2, "text": "👎", "goto": 1, "prev": null },
-      { "id": 3, "text": "🤷", "goto": 1, "prev": null },
-      { "id": 4, "text": "👍", "goto": 1, "prev": null },
-      { "id": 5, "text": "👏", "goto": 1, "prev": null }
+      {
+        "id": "quit",
+        "text": "🔚 Quit completely",
+        "goto": 1,
+        "prev": null
+      },
+      {
+        "id": "reduce",
+        "text": "⬇️ Reduce consumption",
+        "goto": 1,
+        "prev": null
+      },
+      {
+        "id": "continue",
+        "text": "🌱 Continue a sober lifestyle",
+        "goto": 1,
+        "prev": null
+      }
     ]
   },
   {
     "id": 1,
     "type": "single",
-    "question": "How would you like to redefine your relationship with alcohol?",
+    "question": "How old are you?",
     "options": [
-      { "id": "quit", "text": "🔚 Quit completely", "goto": 2, "prev": 0 },
-      { "id": "reduce", "text": "⬇️ Reduce consumption", "goto": 2, "prev": 0 },
       {
-        "id": "continue",
-        "text": "🌱 Continue a sober lifestyle",
-        "goto": 10,
+        "id": "18-29",
+        "text": "18-29",
+        "goto": 2,
+        "prev": 0
+      },
+      {
+        "id": "30-39",
+        "text": "30-39",
+        "goto": 2,
+        "prev": 0
+      },
+      {
+        "id": "40-49",
+        "text": "40-49",
+        "goto": 2,
+        "prev": 0
+      },
+      {
+        "id": "50-59",
+        "text": "50-59",
+        "goto": 2,
+        "prev": 0
+      },
+      {
+        "id": "60+",
+        "text": "60+",
+        "goto": 2,
         "prev": 0
       }
     ]
   },
   {
     "id": 2,
-    "type": "single",
-    "question": "How old are you?",
+    "type": "multiple",
+    "question": "When you think about making positive changes in your life, which of these outcomes excites you the most?",
     "options": [
-      { "id": "18-29", "text": "18-29", "goto": 3, "prev": 1 },
-      { "id": "30-39", "text": "30-39", "goto": 3, "prev": 1 },
-      { "id": "40-49", "text": "40-49", "goto": 3, "prev": 1 },
-      { "id": "50-59", "text": "50-59", "goto": 3, "prev": 1 },
-      { "id": "60+", "text": "60+", "goto": 3, "prev": 1 }
+      {
+        "id": "refreshed",
+        "text": "Waking up each morning feeling refreshed and energized",
+        "goto": 3,
+        "prev": 1
+      },
+      {
+        "id": "focus",
+        "text": "Enhancing your focus and productivity throughout the day",
+        "goto": 3,
+        "prev": 1
+      },
+      {
+        "id": "relationships",
+        "text": "Strengthening your relationships with family and friends",
+        "goto": 3,
+        "prev": 1
+      },
+      {
+        "id": "control",
+        "text": "Feeling more in control and confident about your choices",
+        "goto": 3,
+        "prev": 1
+      }
     ]
   },
   {
     "id": 3,
-    "type": "multi",
+    "type": "single",
     "question": "During a typical week, how many days involve consuming alcohol?",
     "options": [
       {
@@ -58,13 +112,13 @@
       {
         "id": "weekends",
         "text": "Once or twice—usually on weekends",
-        "goto": 5,
+        "goto": 4,
         "prev": 2
       },
       {
         "id": "rarely",
         "text": "Rarely or never during the week",
-        "goto": 6,
+        "goto": 4,
         "prev": 2
       }
     ]
@@ -102,7 +156,7 @@
   },
   {
     "id": 5,
-    "type": "multi",
+    "type": "single",
     "question": "How do you typically handle social events where alcohol is present?",
     "options": [
       {
@@ -133,24 +187,54 @@
   },
   {
     "id": 6,
-    "type": "single",
-    "question": "What's your biggest concern about alcohol use?",
+    "type": "multiple",
+    "question": "Which types of alcoholic beverages do you typically enjoy?",
     "options": [
       {
-        "id": "addiction",
-        "text": "Developing dependency",
+        "id": "beer",
+        "text": "Beer (lager, ale, IPA, stout, etc.)",
         "goto": 7,
         "prev": 5
       },
       {
-        "id": "health_impact",
-        "text": "Long-term health effects",
+        "id": "wine",
+        "text": "Wine (red, white, rosé, sparkling)",
         "goto": 7,
         "prev": 5
       },
       {
-        "id": "performance",
-        "text": "Impact on work/life performance",
+        "id": "spirits",
+        "text": "Spirits (vodka, whiskey, rum, gin, tequila)",
+        "goto": 7,
+        "prev": 5
+      },
+      {
+        "id": "cocktails",
+        "text": "Cocktails or Mixed Drinks",
+        "goto": 7,
+        "prev": 5
+      },
+      {
+        "id": "cider",
+        "text": "Hard Cider or Hard Seltzer",
+        "goto": 7,
+        "prev": 5
+      },
+      {
+        "id": "liqueurs",
+        "text": "Liqueurs or Aperitifs (e.g., amaretto, vermouth)",
+        "goto": 7,
+        "prev": 5
+      },
+      {
+        "id": "fortified",
+        "text": "Fortified Wines (e.g., port, sherry)",
+        "goto": 7,
+        "prev": 5
+      },
+      {
+        "id": "other",
+        "text": "Other",
         "goto": 7,
         "prev": 5
       }
@@ -158,32 +242,184 @@
   },
   {
     "id": 7,
+    "type": "multiple",
+    "question": "What influences your choice of alcoholic beverages?",
+    "options": [
+      {
+        "id": "taste",
+        "text": "Taste preferences",
+        "goto": 8,
+        "prev": 6
+      },
+      {
+        "id": "strength",
+        "text": "Alcohol content or strength",
+        "goto": 8,
+        "prev": 6
+      },
+      {
+        "id": "price",
+        "text": "Price or affordability",
+        "goto": 8,
+        "prev": 6
+      },
+      {
+        "id": "availability",
+        "text": "Availability or convenience",
+        "goto": 8,
+        "prev": 6
+      },
+      {
+        "id": "social",
+        "text": "Social norms or peer preferences",
+        "goto": 8,
+        "prev": 6
+      },
+      {
+        "id": "mood",
+        "text": "Mood or how I'm feeling at the moment",
+        "goto": 8,
+        "prev": 6
+      },
+      {
+        "id": "health",
+        "text": "Health considerations",
+        "goto": 8,
+        "prev": 6
+      },
+      {
+        "id": "other",
+        "text": "Other",
+        "goto": 8,
+        "prev": 6
+      }
+    ]
+  },
+  {
+    "id": 8,
     "type": "single",
     "question": "What best describes your current occupation or primary role?",
     "options": [
       {
         "id": 1,
         "text": "💼 Employed (full-time or part-time)",
-        "goto": 10,
-        "prev": 6
+        "goto": 9,
+        "prev": 7
       },
       {
         "id": 2,
         "text": "💻 Self-employed or freelancer",
         "goto": 10,
-        "prev": 6
+        "prev": 7
       },
-      { "id": 3, "text": "🎓 Student", "goto": 10, "prev": 6 },
+      {
+        "id": 3,
+        "text": "🎓 Student",
+        "goto": 11,
+        "prev": 7
+      },
       {
         "id": 4,
         "text": "🏠 Homemaker or primary caregiver",
-        "goto": 8,
+        "goto": 12,
+        "prev": 7
+      },
+      {
+        "id": 5,
+        "text": "🚀 Entrepreneur",
+        "goto": 13,
         "prev": 6
       },
-      { "id": 5, "text": "🚀 Entrepreneur", "goto": 10, "prev": 6 },
-      { "id": 6, "text": "🌅 Retired", "goto": 8, "prev": 6 }
+      {
+        "id": 6,
+        "text": "🌅 Retired",
+        "goto": 14,
+        "prev": 7
+      }
+    ]
+  },{
+    "id": 9,
+    "type": "multiple",
+    "question": "As someone who is employed, how does your job influence your daily routines and personal time?",
+    "options": [
+      { "id": "work_hours", "text": "I structure my day around work hours", "goto": 15, "prev": 8 },
+      { "id": "balance", "text": "I try to maintain a work-life balance", "goto": 15, "prev": 8 },
+      { "id": "commute", "text": "Commuting impacts my available free time", "goto": 15, "prev": 8 },
+      { "id": "schedule_limited", "text": "My schedule limits spontaneous activities", "goto": 15, "prev": 8 },
+      { "id": "weekend_focus", "text": "I reserve weekends for personal or social time", "goto": 15, "prev": 8 }
     ]
   },
+  {
+    "id": 10,
+    "type": "multiple",
+    "question": "As a self-employed individual, how does freelancing shape your lifestyle?",
+    "options": [
+      { "id": "flexibility", "text": "I enjoy the flexibility to design my own schedule", "goto": 15, "prev": 8 },
+      { "id": "variable_income", "text": "My income can be unpredictable month-to-month", "goto": 15, "prev": 8 },
+      { "id": "self_motivation", "text": "Staying motivated without external pressure is key", "goto": 15, "prev": 8 },
+      { "id": "client_dependence", "text": "My workflow depends on client availability", "goto": 15, "prev": 8 },
+      { "id": "blurred_boundaries", "text": "Work and personal time often blend together", "goto": 15, "prev": 8 }
+    ]
+  },
+  {
+    "id": 11,
+    "type": "multiple",
+    "question": "As a student, how do your academic responsibilities affect your daily life?",
+    "options": [
+      { "id": "study_hours", "text": "I dedicate most of my time to studying or classes", "goto": 15, "prev": 8 },
+      { "id": "social_life", "text": "Balancing academics and social life is a challenge", "goto": 15, "prev": 8 },
+      { "id": "stress", "text": "Academic stress influences my routines", "goto": 15, "prev": 8 },
+      { "id": "extracurricular", "text": "I participate in extracurricular or part-time work", "goto": 15, "prev": 8 },
+      { "id": "planning_ahead", "text": "I plan my schedule around exams or deadlines", "goto": 15, "prev": 8 }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "multiple",
+    "question": "As a homemaker or caregiver, how do your responsibilities shape your routine?",
+    "options": [
+      { "id": "family_focus", "text": "Most of my time is dedicated to family needs", "goto": 15, "prev": 8 },
+      { "id": "routine_oriented", "text": "I follow a structured daily routine", "goto": 15, "prev": 8 },
+      { "id": "flexibility", "text": "I value the flexibility to manage household tasks", "goto": 15, "prev": 8 },
+      { "id": "self_care", "text": "Finding time for self-care is often challenging", "goto": 15, "prev": 8 },
+      { "id": "multi_tasking", "text": "I often juggle multiple responsibilities at once", "goto": 15, "prev": 8 }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "multiple",
+    "question": "As an entrepreneur, how does running a business impact your lifestyle?",
+    "options": [
+      { "id": "long_hours", "text": "I often work long or irregular hours", "goto": 15, "prev": 8 },
+      { "id": "decision_making", "text": "I constantly make key decisions on the go", "goto": 15, "prev": 8 },
+      { "id": "personal_growth", "text": "Entrepreneurship pushes my personal development", "goto": 15, "prev": 8 },
+      { "id": "work_life_blend", "text": "My business life overlaps with personal time", "goto": 15, "prev": 8 },
+      { "id": "goal_focused", "text": "I'm highly goal-oriented and driven", "goto": 15, "prev": 8 }
+    ]
+  },
+  {
+    "id": 14,
+    "type": "multiple",
+    "question": "As a retired individual, how has retirement influenced your daily routines involving leisure activities?",
+    "options": [
+      { "id": "hobbies", "text": "I have more time for hobbies and relaxation", "goto": 15, "prev": 8 },
+      { "id": "socialize", "text": "I enjoy socializing with other retirees", "goto": 15, "prev": 8 },
+      { "id": "health_focus", "text": "I prioritize health and wellness activities", "goto": 15, "prev": 8 },
+      { "id": "new_interests", "text": "I explore new interests and learning opportunities", "goto": 15, "prev": 8 },
+      { "id": "balanced_routine", "text": "I maintain a balanced routine with varied activities", "goto": 15, "prev": 8 }
+    ]
+  },{
+  "id": 15,
+  "type": "multiple",
+  "question": "With your balanced routine, how does alcohol consumption affect your patience or mood with those you live with?",
+  "options": [
+    { "id": "composure", "text": "I maintain composure and positive interactions", "goto": 16, "prev": 8 },
+    { "id": "irritability", "text": "I notice increased irritability or impatience", "goto": 16, "prev": 8 },
+    { "id": "relax_unwind", "text": "Alcohol helps me relax and unwind after a busy day", "goto": 16, "prev": 8 },
+    { "id": "communication", "text": "I prioritize open communication and understanding", "goto": 16, "prev": 8 },
+    { "id": "coping_strategies", "text": "I seek healthier coping strategies for stress", "goto": 16, "prev": 8 }
+  ]
+},
   {
     "id": 8,
     "type": "multi",
@@ -226,9 +462,24 @@
     "type": "single",
     "question": "Exploring new interests post-retirement? How does alcohol impact your mood and interactions at home? Let us support your journey.",
     "options": [
-      { "id": 1, "text": "Exercise and fitness", "goto": 10, "prev": 8 },
-      { "id": 2, "text": "Hobbies and creativity", "goto": 10, "prev": 8 },
-      { "id": 3, "text": "Quality time with family", "goto": 10, "prev": 8 }
+      {
+        "id": 1,
+        "text": "Exercise and fitness",
+        "goto": 10,
+        "prev": 8
+      },
+      {
+        "id": 2,
+        "text": "Hobbies and creativity",
+        "goto": 10,
+        "prev": 8
+      },
+      {
+        "id": 3,
+        "text": "Quality time with family",
+        "goto": 10,
+        "prev": 8
+      }
     ]
   },
   {

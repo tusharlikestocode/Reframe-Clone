@@ -6,9 +6,8 @@ import MultiSelectTemplate from "../common/MultiSelectTemplate";
 import MidwayScreen from "../common/MidwayScreen";
 import { useState } from "react";
 import questionsData from "../../data/questions.json";
-import FinalLoadingScreen from "../common/FinalLoadingScreen";
 import ReactionTemplate from "../common/ReactionTemplate";
-
+import FinalFlowWrapper from "../wrapper/FinalFlowWrapper";
 const BaseTemplate = () => {
   const [questions, setQuestions] = useState(questionsData);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -116,7 +115,7 @@ const BaseTemplate = () => {
 
   if (isComplete) {
     return (
-      <FinalLoadingScreen/>
+       <FinalFlowWrapper />
     );
   }
 
